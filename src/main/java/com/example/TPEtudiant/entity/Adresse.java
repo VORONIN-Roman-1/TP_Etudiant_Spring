@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -11,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class Adresse {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@JsonIgnore
 	private Long id;
 	@NotEmpty
@@ -24,11 +25,13 @@ public class Adresse {
 	private String codePostale;
 	@NotEmpty
 	private String ville;
+	//@OneToOne(optional = false, mappedBy = "adresse")
+	//private Etudiant etudiant;
 
 	public Adresse() {
 	}
 
-	public Adresse( Integer numeroVoie, String typeVoie, String nomVoie, String codePostale, String ville) {
+	public Adresse(Integer numeroVoie, String typeVoie, String nomVoie, String codePostale, String ville) {
 		this.numeroVoie = numeroVoie;
 		this.typeVoie = typeVoie;
 		this.nomVoie = nomVoie;
@@ -36,9 +39,9 @@ public class Adresse {
 		this.ville = ville;
 	}
 
-	public String getAdressePostale() {
+	/*public String getAdressePostale() {
 		return numeroVoie + " " + typeVoie + " " + nomVoie + " " + codePostale + " " + ville;
-	}
+	}*/
 
 	public Long getId() {
 		return id;
