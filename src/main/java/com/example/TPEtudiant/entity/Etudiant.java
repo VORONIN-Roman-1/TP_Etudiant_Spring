@@ -18,15 +18,15 @@ import javax.validation.constraints.Size;
 public class Etudiant {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public Long id;
+	private Long id;
 	@NotEmpty
-	public String nom;
+	private String nom;
 	@NotEmpty
-	public String prenom;
+	private String prenom;
 	@NotEmpty
 	@OneToOne (optional=false, cascade=CascadeType.ALL)
     //@JoinColumn
-	public Adresse adresse;
+	private Adresse adresse;
 	@Size(min = 3)
 	@NotEmpty
 	@ElementCollection

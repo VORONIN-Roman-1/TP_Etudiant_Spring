@@ -11,14 +11,14 @@ public class Professeur {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public Long id;
+	private Long id;
 	@NotEmpty
-	public String nom;
+	private String nom;
 	@NotEmpty
-	public String prenom;
+	private String prenom;
 
 	@NotEmpty
-	public String matiere;
+	private String matiere;
 
 	public Professeur() {
 	}
