@@ -25,7 +25,6 @@ public class AdresseController {
 	@PostMapping(path = "api/adresses", consumes = "application/json")
 	public ResponseEntity<Integer> postAdresse(@RequestBody Adresse adresse) {
 		adresseRepository.save(adresse);
-
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
