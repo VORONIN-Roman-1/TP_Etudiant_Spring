@@ -36,11 +36,6 @@ public class ClasseController {
 		classeRepository.save(classe);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
-//	public Classe postClasse(@RequestBody Classe classe) {
-//		return classe;
-	//	classeRepository.save(classe);
-	//	return new ResponseEntity<>(HttpStatus.OK);
-//	}
 
 	@PostMapping(path = "api/classes/init")
 	public ResponseEntity<Integer> postClasseInit() {

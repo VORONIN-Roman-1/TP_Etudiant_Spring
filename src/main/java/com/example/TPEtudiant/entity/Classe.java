@@ -12,10 +12,13 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Classe {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO )
+	@JsonIgnore
 	private Long id;
 	@NotEmpty
 	private String nom;
