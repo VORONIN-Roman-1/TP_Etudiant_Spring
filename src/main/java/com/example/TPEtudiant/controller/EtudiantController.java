@@ -38,7 +38,6 @@ public class EtudiantController {
 	public ResponseEntity<Integer> postAdresseInit() {
 		Iterable<Adresse> adresses = adresseRepository.findAll();
 		Iterator<Adresse> iter = adresses.iterator();
-		Float[] fl2 = new Float[] { 1.2f, 3.5f, 14f, 6f };
 		List<Float> list = new ArrayList<>();
 		list.add(1.2f);
 		list.add(3.5f);
