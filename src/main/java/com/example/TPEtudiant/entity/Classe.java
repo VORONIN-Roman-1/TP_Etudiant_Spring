@@ -91,7 +91,7 @@ public class Classe {
 		return moyenneAverage / etudiants.size();
 	}
 
-	public String affichageMoyenne() {
+	public String getAffichageMoyen() {
 		return "Class : " + nom + " ; la moyenne la plus basse : " + plusBasseMoyenne()
 				+ " ; la moyenne de la classe : " + moyenneClasse() + " ; la moyenne la plus haute : "
 				+ plusHauteMoyenne();

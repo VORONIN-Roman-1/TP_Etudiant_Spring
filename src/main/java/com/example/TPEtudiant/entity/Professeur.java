@@ -36,7 +36,7 @@ public class Professeur {
 		return nom + " " + prenom;
 	}
 
-	public String affichage() {
+	public String getAffichage() {
 		return nomPrenom() + " ; matière : " + matiere;
 	}
 
