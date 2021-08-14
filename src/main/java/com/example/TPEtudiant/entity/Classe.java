@@ -90,7 +90,7 @@ public class Classe {
 		}
 		return moyenneAverage / etudiants.size();
 	}
-
+	@JsonIgnore
 	public String getAffichageMoyen() {
 		return "Class : " + nom + " ; la moyenne la plus basse : " + plusBasseMoyenne()
 				+ " ; la moyenne de la classe : " + moyenneClasse() + " ; la moyenne la plus haute : "

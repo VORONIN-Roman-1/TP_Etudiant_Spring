@@ -35,7 +35,7 @@ public class Professeur {
 	public String nomPrenom() {
 		return nom + " " + prenom;
 	}
-
+	@JsonIgnore
 	public String getAffichage() {
 		return nomPrenom() + " ; \tMatière : " + matiere;
 	}

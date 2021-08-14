@@ -24,8 +24,6 @@ public class Adresse {
 	private String codePostale;
 	@NotEmpty
 	private String ville;
-	//@OneToOne(optional = false, mappedBy = "adresse")
-	//private Etudiant etudiant;
 
 	public Adresse() {
 	}
@@ -37,7 +35,7 @@ public class Adresse {
 		this.codePostale = codePostale;
 		this.ville = ville;
 	}
-
+	@JsonIgnore
 	public String getAdressePostale() {
 		return numeroVoie + " " + typeVoie + " " + nomVoie + " " + codePostale + " " + ville;
 	}

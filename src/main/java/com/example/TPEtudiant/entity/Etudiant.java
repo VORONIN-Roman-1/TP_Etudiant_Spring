@@ -48,7 +48,7 @@ public class Etudiant {
 		this.notes = notes;
 	}
 
-	
+	@JsonIgnore
 	public String getNomPrenom() {
 		return nom + " " + prenom;
 	}
@@ -56,11 +56,11 @@ public class Etudiant {
 	public float moyenne() {
 		return (notes.get(0) + notes.get(1) + notes.get(2)) / 3;
 	}
-
+	@JsonIgnore
 	public String getAdressePostale() {
 		return getNomPrenom() + " ; Adresse: " + adresse.getAdressePostale();
 	}
-
+	@JsonIgnore
 	public String getAffichage() {
 		return getAdressePostale() + " ; \n" + "\tNotes: " + notes.get(0) + " ; " + notes.get(1) + " ; " + notes.get(2)
 				+ " ; moyenne = " + moyenne();
