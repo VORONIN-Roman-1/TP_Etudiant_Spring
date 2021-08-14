@@ -53,8 +53,9 @@ public class ClasseController {
 		classeRepository.saveAll(classes);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
-	@GetMapping (path = "api/classes")
-	public Iterable<Classe> getClasse(){
+
+	@GetMapping(path = "api/classes")
+	public Iterable<Classe> getClasse() {
 		return classeRepository.findAll();
 	}
 }

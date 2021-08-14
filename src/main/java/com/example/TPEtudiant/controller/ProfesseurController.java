@@ -3,8 +3,6 @@ package com.example.TPEtudiant.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -39,8 +37,9 @@ public class ProfesseurController {
 		professeurRepository.saveAll(list);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
-	@GetMapping (path = "api/professeurs")
-	public Iterable<Professeur> getProfesseur(){
+
+	@GetMapping(path = "api/professeurs")
+	public Iterable<Professeur> getProfesseur() {
 		return professeurRepository.findAll();
 	}
 }
