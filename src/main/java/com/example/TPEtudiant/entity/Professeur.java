@@ -37,7 +37,7 @@ public class Professeur {
 	}
 
 	public String getAffichage() {
-		return nomPrenom() + " ; matière : " + matiere;
+		return nomPrenom() + " ; \tMatière : " + matiere;
 	}
 
 	public Long getId() {

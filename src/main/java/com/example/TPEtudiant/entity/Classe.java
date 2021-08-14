@@ -100,16 +100,16 @@ public class Classe {
 	public String[] tableauEtudiants() {
 		String[] etuds = new String[5];
 		for (int i = 0; i < 5; i++)
-			etuds[i] = etudiants.get(i).nomPrenom();
+			etuds[i] = etudiants.get(i).getNomPrenom();
 		return etuds;
 	}
 
-	/*public String affichage() {
-		String result = "Class : " + nom + " ; Professeur : " + professeurPrincipal.affichage() + " ; Etudiant : ";
+	public String affichage() {
+		String result = "Class : " + nom + " ; \nProfesseur : " + professeurPrincipal.getAffichage() + " ; \nEtudiants : \n";
 		for (Etudiant etudiant : etudiants) {
-			result += " ; " + etudiant.affichage();
+			result += etudiant.getAffichage()+"\n";
 		}
 		return result;
 	}
-	*/
+	
 }

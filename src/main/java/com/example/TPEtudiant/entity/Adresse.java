@@ -38,9 +38,9 @@ public class Adresse {
 		this.ville = ville;
 	}
 
-	/*public String getAdressePostale() {
+	public String getAdressePostale() {
 		return numeroVoie + " " + typeVoie + " " + nomVoie + " " + codePostale + " " + ville;
-	}*/
+	}
 
 	public Long getId() {
 		return id;

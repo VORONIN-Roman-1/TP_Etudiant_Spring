@@ -5,7 +5,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <div> moyennes</div>
+	<div><form method="post" action="/menuDetailEtudiant">
+			<input type="number" name="number" placeholder="ID ou 0,svp"/> 
+			<button type="submit"> Recevoir </button><p/>
+	</form></div>
+	<div>
+	Afficher le détail d'un étudiant <br/>
+	--------------------------------<br/>
+	{{#afficherEtudiants}}
+	ID: {{id}} ; {{NomPrenom}} <br/>
+	{{/afficherEtudiants}}
+<a href="/"> 0 - Retour au menu principal</a>
+   </div> <p/><p/><p/>
+   <div>{{#afficherDetailEtudiantConcret}}
+	{{affichage}}  
+{{/afficherDetailEtudiantConcret}}
    
+   </div>
 </body>
 </html>

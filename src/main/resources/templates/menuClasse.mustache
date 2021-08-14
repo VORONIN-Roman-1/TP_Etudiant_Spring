@@ -5,7 +5,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <div> moyennes</div>
+	<form method="post" action="/menuClasse">
+			<input type="number" name="number" placeholder="ID ou 0,svp"/> 
+			<button type="submit"> Recevoir </button><p/>
+	</form>
+    <div> Afficher le détail d'une classe<br/>
+-------------------------------<br/>
+{{#afficherAllClases}}
+	ID: {{id}}; Nom de la classe: {{nom}} <br/>
+{{/afficherAllClases}}
+<a href="/"> 0 - Retour au menu principal</a>
+<p/>
+ 
+{{#afficherDetailClasseConcret}}
+	<textarea cols="100" rows="15" id="rules">{{affichage}}  </textarea> <br/>
+{{/afficherDetailClasseConcret}}
+
+
+
+    </div>
    
 </body>
 </html>

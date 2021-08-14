@@ -49,7 +49,7 @@ public class Etudiant {
 	}
 
 	
-	public String nomPrenom() {
+	public String getNomPrenom() {
 		return nom + " " + prenom;
 	}
 
@@ -57,14 +57,14 @@ public class Etudiant {
 		return (notes.get(0) + notes.get(1) + notes.get(2)) / 3;
 	}
 
-//	public String getAdressePostale() {
-//		return nomPrenom() + " ; Adresse: " + adresse.getAdressePostale();
-//	}
-//
-//	public String affichage() {
-//		return getAdressePostale() + " ; " + "Notes: " + notes.get(0) + " ; " + notes.get(1) + " ; " + notes.get(2)
-//				+ " ; moyenne = " + moyenne();
-//	}
+	public String getAdressePostale() {
+		return getNomPrenom() + " ; Adresse: " + adresse.getAdressePostale();
+	}
+
+	public String getAffichage() {
+		return getAdressePostale() + " ; \n" + "\tNotes: " + notes.get(0) + " ; " + notes.get(1) + " ; " + notes.get(2)
+				+ " ; moyenne = " + moyenne();
+	}
 
 	public Long getId() {
 		return id;

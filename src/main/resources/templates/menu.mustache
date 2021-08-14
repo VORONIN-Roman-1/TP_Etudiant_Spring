@@ -5,13 +5,48 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <div> <a href= "/menuMoyennes" >Afficher les moyennes de chaque classe</a><p>
-    <a href= "/menuClasse" >Afficher le détail d'une classe</a><p>
-    <a href= "/menuEtudiant" >Afficher tous les étudiants</a><p>
-    <a href= "/menuDetailEtudiant" >Afficher le détail d'un étudiant</a><p>
-    <a href= "/menuProf" >Afficher tous les professeurs</a><p>
-    <a href= "/Quitter" >Quitter</a>
-</div>
-   
+	<form method="get">
+			<input type="number" name="number" placeholder="Votre choix,svp"/> 
+			<button type="submit"> Recevoir </button><p/>
+	</form>
+    <div> 
+	   <a href= "/?number=1"> 1) Afficher les moyennes de chaque classe</a><p/>
+		<a href= "/?number=2">2) Afficher le détail d'une classe</a><p/>
+	    <a href= "/?number=3">3) Afficher tous les étudiants</a><p/>
+	   <a href= "/?number=4"> 4) Afficher le détail d'un étudiant</a><p/>
+	   <a href= "/?number=5"> 5) Afficher tous les professeurs</a><p/>
+	  <a href= "/?number=6">  6) Quitter</a>
+	</div>
+	
+	</div>
+		{{#montreMoyen}}
+			Moyennes de chaque classe <br/>
+			-------------------------<br/>
+			{{#afficherMoyen}}
+				{{affichageMoyen}} <br/>
+			{{/afficherMoyen}}
+	
+		{{/montreMoyen}}
+	</div>
+	
+	</div>
+		{{#montreEtudiants}}
+			Tous les étudiants <br/>
+			------------------ <br/>
+			{{#afficherEtudiants}}
+				{{NomPrenom}} <br/>
+			{{/afficherEtudiants}}
+		{{/montreEtudiants}}
+	</div>
+	</div>
+		{{#montreProfesseurs}}
+			Afficher tous les professeurs <br/>
+			----------------------------- <br/>
+			{{#afficherProfesseurs}}
+				{{affichage}} <br/>
+			{{/afficherProfesseurs}}
+		{{/montreProfesseurs}}
+	</div>
+
 </body>
 </html>
